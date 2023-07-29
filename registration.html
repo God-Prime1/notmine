@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Register</h1>
+
+            <form action="connection.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required ><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required ><br>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="admission number">Admission number:</label>
+                <input type="text" id="admission number" name="admnumber" required><br>
+
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirmp" required><br>
+
+                <label for="department">Department:</label>
+                <select id="department" name="dept">
+                    <option value="BCA">BCA</option>
+                    <option value=BBA">BBA</option>
+                    <option value="CS">CS</option>
+                    <option value="BA ">BA</option>
+                </select><br>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address"><br>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone"><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob"><br>
+
+                <style>
+                    #captcha {
+                        font-family: Arial, sans-serif;
+                        font-size: 20px;
+                        padding: 10px;
+                        background-color: #f2f2f2;
+                        border: 1px solid #ccc;
+                        display: inline-block;
+                    }
+                    #refresh {
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        padding: 5px 10px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+                </style>
+                <script>
+                    function generateCaptcha() {
+                        var captcha = "";
+                        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                        for (var i = 0; i < 6; i++) {
+                            captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+                        }
+                        document.getElementById("captcha").innerHTML = captcha;
+                    }
+                </script>
+            </head>
+            <body>
+                <h2>Registration Captcha</h2>
+                <p>Please enter the characters you see in the image below:</p>
+                <div id="captcha"></div>
+                <button id="refresh" onclick="generateCaptcha()">Refresh</button>
+                <br><br>
+                <input type="text" placeholder="Enter the characters" required>
+                <br><br>
+                
+                <script>
+                    generateCaptcha();
+                </script>
+            
+ <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+ <div class="form-group">
+    <button type="submit">Register</button>
+  </div>
+            </form>
+        </div>
+    </div>
+
+   
+</html>

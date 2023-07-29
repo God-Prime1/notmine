@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Election Voting Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			margin: 50px auto;
+			width: 50%;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="radio"] {
+			margin-right: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>College Election Voting Page</h1>
+	<form action="submit_vote.php" method="post">
+		<label for="candidate1">
+			<input type="radio" name="candidate" id="candidate1" value="1">
+			SHIJU T
+		</label>
+		<label for="candidate2">
+			<input type="radio" name="candidate" id="candidate2" value="2">
+			NIKHIL
+		</label>
+		<label for="candidate3">
+			<input type="radio" name="candidate" id="candidate3" value="3">
+			SHIJU P
+		</label>
+		<input type="submit" value="Submit Vote">
+	</form>
+</body>
+</html>
